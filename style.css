@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #121214;
+
+    --base-color: 194;
+    --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+    --primary-color: hsl(var(--base-color), 100%, 63%);
+
+    --text-color: #FFFFFF;
+
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+    font-family: 'Roboto', sans-serif;
+
+    display: grid;
+    /* mantém o fluxo do HTML, mas adiciona uma linha separando o main do footer, 
+    permitindo alinhar o main no centro da tela e o colocar o footer abaixo da linha */
+
+    min-height: 100vh; /* esticando o conteúdo do body para ocupar toda a viewport */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path {
+    fill: var(--primary-color);
+}
+
+button svg {
+    width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+main {
+    justify-self: center; /* propriedade destravada pelo display grid */
+    align-self: end; /* alinhando na base da linha */
+}
+
+#timer {
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+
+    display: flex; /* removendo os espaços entre os números e o separador */
+    margin-bottom: 1.6rem;
+}
+
+#controls {
+    background-color: var(--bg-primary-light);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+
+    border-radius: 9999px; /* border pill */
+
+    width: clamp(10rem, 10rem + 30vw, 22.8rem); /* função que recebe como parâmetros valor mínimo, valor ideal (valor mínimo + largura da página) e valor máximo */
+    height: clamp(8rem, 5rem + 10vw, 10.8rem);
+}
+
+footer {
+    justify-self: end;
+    align-self: end;
+
+    padding: 0 4rem 3.2rem 0;
+}
