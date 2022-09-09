@@ -21,7 +21,7 @@ export default function({controls, timer, sound}) {
     })
 
     buttonStop.addEventListener('click', function() {
-        controls.reset() // programação declarativa
+        controls.reset()
         timer.reset()
         sound.pressButton()
     })
@@ -46,7 +46,6 @@ export default function({controls, timer, sound}) {
             return
         }
 
-        // minutesDisplay.textContent = String(minutes).padStart(2, "0")
         timer.updateDisplay(newMinutes, 0)
         timer.updateMinutes(newMinutes)
     })
