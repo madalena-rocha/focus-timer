@@ -1,5 +1,5 @@
 # focus-timer
-Projeto 08 do Explorer da Rocketseat, cujo objetivo foi a criação de um temporizador estilo Pomodoro.
+Projeto 08 do Explorer da Rocketseat, cujo objetivo foi a criação de um temporizador estilo Pomodoro utilizando HTML, CSS e JavaScritpt.
 
 ![Projeto "Focus Timer"](https://github.com/madalena-rocha/focus-timer/blob/main/assets/focus-timer.png)
 
